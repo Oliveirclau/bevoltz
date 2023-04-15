@@ -1,3 +1,7 @@
 export function TextComponent() {
-  return <p>Oi, eu sou um componente de teste</p>
+  return (
+    <p>
+      Abasteça seu veículo elétrico com facilidade e rapidez, onde quer que vá.
+    </p>
+  )
 }
