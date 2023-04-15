@@ -18,9 +18,13 @@ const defaultTheme = {
   font: {
     family:
       "Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-    light: 300,
-    normal: 400,
-    bold: 600,
+    weights: {
+      light: 300,
+      regular: 400,
+      medium: 500,
+      semiBold: 600,
+      bold: 700,
+    },
     sizes: {
       xxxsmall: '1.2rem',
       xxsmall: '1.4rem',
