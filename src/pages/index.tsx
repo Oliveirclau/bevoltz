@@ -1,7 +1,9 @@
+import { TextComponent } from '@components/Test'
+
 export default function Home() {
   return (
     <>
-      <p>HomePage</p>
+      <TextComponent />
     </>
   )
 }

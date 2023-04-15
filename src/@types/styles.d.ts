@@ -1,4 +1,4 @@
-import defaultTheme from '@/styles/theme'
+import defaultTheme from '@styles/theme'
 import 'styled-components'
 
 type ThemeType = typeof defaultTheme
