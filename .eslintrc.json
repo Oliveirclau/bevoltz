@@ -22,7 +22,8 @@
   "plugins": [
     "react",
     "jsx-a11y",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers"
   ],
   "rules": {
     "prettier/prettier": ["error", {
@@ -47,7 +48,22 @@
     "jsx-a11y/aria-proptypes": "warn",
     "jsx-a11y/aria-unsupported-elements": "warn",
     "jsx-a11y/role-has-required-aria-props": "warn",
-    "jsx-a11y/role-supports-aria-props": "warn"
+    "jsx-a11y/role-supports-aria-props": "warn",
+    "import-helpers/order-imports": [
+        "warn",
+        { 
+            "newlinesBetween": "always",
+            "groups": [
+                ["/^react/", "/^next/", "/@next/"],
+                "/^module/",
+                "/^@shared/",
+                "/components/",
+                "/absolute/",
+                ["parent", "sibling", "index"]
+            ],
+            "alphabetize": { "order": "asc", "ignoreCase": true }
+        }
+    ]
   },
   "settings": {
     "react": {
