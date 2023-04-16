@@ -12,7 +12,7 @@ export interface ButtonProps {
 export const Button: React.FC<ButtonProps> = ({ content, variant, icon }) => {
   return (
     <ButtonContainer content={content} variant={variant}>
-      <Text content={content} color="white" size="xxsmall" weight="semiBold" />
+      <Text content={content} color="white" size="xsmall" weight="semiBold" />
 
       {icon && (
         <IconContainer>

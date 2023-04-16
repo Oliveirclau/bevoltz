@@ -35,6 +35,17 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
+
+  ul {
+    list-style: none;
+  }
+
+  .container-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 0px 32px;
+  }
 `
 
 export default GlobalStyles
