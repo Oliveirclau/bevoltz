@@ -35,7 +35,7 @@ export const ImageBox = styled('div')`
     max-width: 100%;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1580px) {
     img {
       height: auto;
     }
