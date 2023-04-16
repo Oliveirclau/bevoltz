@@ -11,6 +11,7 @@ export interface HeadingProps {
   weight?: keyof typeof defaultTheme.font.weights
   level: 1 | 2 | 3 | 4 | 5 | 6
   maxWidth?: string
+  mobileSize?: keyof typeof defaultTheme.font.sizes
 }
 
 export const Heading: React.FC<HeadingProps> = ({
@@ -20,6 +21,7 @@ export const Heading: React.FC<HeadingProps> = ({
   weight,
   size,
   maxWidth,
+  mobileSize,
 }) => {
   return (
     <HeadingContainer
@@ -29,6 +31,7 @@ export const Heading: React.FC<HeadingProps> = ({
       content={content}
       size={size}
       maxWidth={maxWidth}
+      mobileSize={mobileSize}
     >
       {content}
     </HeadingContainer>
