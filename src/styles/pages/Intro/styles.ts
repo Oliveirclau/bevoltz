@@ -53,3 +53,34 @@ export const ImageBox = styled('div')`
     }
   }
 `
+
+export const InfoContainer = styled('div')``
+
+export const InfoArea = styled('div')`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+  height: 247px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+`
+
+export const InfoBoxText = styled('div')`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+  gap: 30px;
+`
+
+export const Separator = styled('div')`
+  ${({ theme }) => css`
+    display: block;
+    width: 5px;
+    height: 129px;
+    background-color: ${theme.colors.gray_100};
+  `}
+`

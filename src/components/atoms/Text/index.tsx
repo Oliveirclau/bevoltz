@@ -11,6 +11,7 @@ export interface TextProps {
   weight?: keyof typeof defaultTheme.font.weights
   maxWidth?: string
   mobileSize?: keyof typeof defaultTheme.font.sizes
+  lineHeight?: number
 }
 
 export const Text: React.FC<TextProps> = ({
@@ -20,6 +21,7 @@ export const Text: React.FC<TextProps> = ({
   size,
   maxWidth,
   mobileSize,
+  lineHeight,
 }) => {
   return (
     <TextContainer
@@ -29,6 +31,7 @@ export const Text: React.FC<TextProps> = ({
       size={size}
       maxWidth={maxWidth}
       mobileSize={mobileSize}
+      lineHeight={lineHeight}
     >
       {content}
     </TextContainer>

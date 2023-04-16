@@ -8,7 +8,15 @@ import { Header } from '@components/organisms/Header'
 import introBannerDireita from '@assets/intro-banner-direita.png'
 import introBannerEsquerda from '@assets/intro-banner-esquerda.png'
 import introBanner from '@assets/intro-banner.png'
-import { ImageBox, IntroContainer, TextBox } from '@styles/pages/Intro/styles'
+import {
+  ImageBox,
+  InfoArea,
+  InfoBoxText,
+  InfoContainer,
+  IntroContainer,
+  Separator,
+  TextBox,
+} from '@styles/pages/Intro/styles'
 
 export default function Home() {
   return (
@@ -58,6 +66,31 @@ export default function Home() {
           />
         </ImageBox>
       </IntroContainer>
+
+      <InfoContainer className="container-content">
+        <InfoArea>
+          <Heading
+            content="Conectando motoristas e estações de carregamento em uma rede global unificada."
+            color="gray_300"
+            size="large"
+            level={1}
+            maxWidth="520px"
+            mobileSize="small"
+          />
+
+          <InfoBoxText>
+            <Separator></Separator>
+            <Text
+              content="Descubra a eficiência sem precedentes no carregamento de veículos elétricos através da plataforma beVoltz, projetada para atender às demandas de um mundo em constante evolução."
+              color="gray_100"
+              size="xsmall"
+              mobileSize="xxsmall"
+              maxWidth="534px"
+              lineHeight={160}
+            />
+          </InfoBoxText>
+        </InfoArea>
+      </InfoContainer>
     </>
   )
 }
