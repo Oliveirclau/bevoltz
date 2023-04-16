@@ -10,13 +10,14 @@ export const TextContainer = styled('p')<TextProps>`
     size = 'xsmall',
     maxWidth = '100%',
     mobileSize = size,
+    lineHeight = '135',
     theme,
   }) => css`
     color: ${theme.colors[color]};
     font-size: ${theme.font.sizes[size]};
     font-weight: ${theme.font.weights[weight]};
     max-width: ${maxWidth};
-    line-height: 135%;
+    line-height: ${`${lineHeight}%`};
 
     @media (max-width: 1000px) {
       font-size: ${theme.font.sizes[mobileSize]};
