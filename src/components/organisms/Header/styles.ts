@@ -13,12 +13,11 @@ export const HeaderContainer = styled('div')`
 `
 
 export const HeaderArea = styled('div')`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    background: linear-gradient(100.83deg, #f7f9f8 6.32%, #edeef0 71.74%);
-  `}
+  background: transparent;
 `
 
 export const IconHamburger = styled('div')`

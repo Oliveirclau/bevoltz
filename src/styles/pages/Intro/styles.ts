@@ -32,5 +32,24 @@ export const ImageBox = styled('div')`
 
   img {
     flex: 1;
+    max-width: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    img {
+      height: auto;
+    }
+
+    & > *:nth-child(1) {
+      display: none;
+    }
+
+    & > *:nth-child(2) {
+      color: green;
+    }
+
+    & > *:nth-child(3) {
+      display: none;
+    }
   }
 `
