@@ -46,6 +46,15 @@ const GlobalStyles = createGlobalStyle`
     margin: auto;
     padding: 0px 32px;
   }
+
+  .full-container-content {
+
+    @media (max-width: 1000px) {
+        padding-left: 32px;
+        padding-right: 32px;
+
+    }
+  }
 `
 
 export default GlobalStyles

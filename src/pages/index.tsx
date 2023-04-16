@@ -16,19 +16,21 @@ export default function Home() {
       <Header />
 
       <IntroContainer>
-        <TextBox>
+        <TextBox className="full-container-content">
           <Heading
             content="Abasteça seu veículo elétrico com facilidade e rapidez, onde quer que vá."
             color="gray_300"
             size="xxlarge"
             level={1}
             maxWidth="973px"
+            mobileSize="large"
           />
 
           <Text
             content="Aprimoramos a experiência de carregamento, combinando design intuitivo, tecnologia de ponta e um compromisso inabalável com a sustentabilidade."
             color="gray_100"
             size="xsmall"
+            mobileSize="xxsmall"
             maxWidth="708px"
           />
 
