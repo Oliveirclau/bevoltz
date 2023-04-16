@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -16,8 +16,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      font-size: ${theme.font.sizes.medium};
-      background-color: ${theme.colors.gray_50};
+      background-color: ${theme.colors.white};
     }
 
     body,
@@ -36,6 +35,26 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
-`;
 
-export default GlobalStyles;
+  ul {
+    list-style: none;
+  }
+
+  .container-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 0px 32px;
+  }
+
+  .full-container-content {
+
+    @media (max-width: 1000px) {
+        padding-left: 32px;
+        padding-right: 32px;
+
+    }
+  }
+`
+
+export default GlobalStyles
