@@ -75,7 +75,7 @@ export default function Home() {
             size="large"
             level={1}
             maxWidth="520px"
-            mobileSize="small"
+            mobileSize="medium"
           />
 
           <InfoBoxText>
