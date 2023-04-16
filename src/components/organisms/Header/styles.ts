@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 export const HeaderContainer = styled('div')`
   ${({ theme }) => css`
     width: 100%;
-    background: linear-gradient(100.83deg, #f7f9f8 6.32%, #edeef0 71.74%);
+    background-color: ${theme.colors.gray_50};
     padding-top: 80px;
     padding-bottom: 40px;
 
@@ -17,7 +17,7 @@ export const HeaderArea = styled('div')`
     display: flex;
     justify-content: space-between;
 
-    background: linear-gradient(100.83deg, #f7f9f8 6.32%, #edeef0 71.74%);
+    background-color: ${theme.colors.gray_50};
   `}
 `
 

@@ -11,7 +11,6 @@ export const LinkText: React.FC<LinkTextProps> = ({
   color,
   weight,
   size,
-  maxWidth,
   ...rest
 }) => {
   return (
@@ -21,7 +20,6 @@ export const LinkText: React.FC<LinkTextProps> = ({
         weight={weight}
         content={content}
         size={size}
-        maxWidth={maxWidth}
       >
         {content}
       </LinkTextContainer>

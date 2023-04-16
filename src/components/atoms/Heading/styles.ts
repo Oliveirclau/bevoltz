@@ -8,16 +8,9 @@ export const HeadingContainer = styled('h1').attrs<HeadingProps>(
     as: `h${level}`,
   }),
 )<HeadingProps>`
-  ${({
-    color,
-    weight = 'bold',
-    size = 'medium',
-    maxWidth = '100%',
-    theme,
-  }) => css`
+  ${({ color, weight = 'bold', size = 'medium', theme }) => css`
     color: ${theme.colors[color]};
     font-size: ${theme.font.sizes[size]};
     font-weight: ${theme.font.weights[weight]};
-    max-width: ${maxWidth};
   `}
 `

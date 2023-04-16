@@ -10,7 +10,6 @@ export interface HeadingProps {
   size?: keyof typeof defaultTheme.font.sizes
   weight?: keyof typeof defaultTheme.font.weights
   level: 1 | 2 | 3 | 4 | 5 | 6
-  maxWidth?: string
 }
 
 export const Heading: React.FC<HeadingProps> = ({
@@ -19,7 +18,6 @@ export const Heading: React.FC<HeadingProps> = ({
   color,
   weight,
   size,
-  maxWidth,
 }) => {
   return (
     <HeadingContainer
@@ -28,7 +26,6 @@ export const Heading: React.FC<HeadingProps> = ({
       weight={weight}
       content={content}
       size={size}
-      maxWidth={maxWidth}
     >
       {content}
     </HeadingContainer>
