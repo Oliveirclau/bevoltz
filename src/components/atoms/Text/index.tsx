@@ -9,11 +9,24 @@ export interface TextProps {
   color: keyof typeof defaultTheme.colors
   size?: keyof typeof defaultTheme.font.sizes
   weight?: keyof typeof defaultTheme.font.weights
+  maxWidth?: string
 }
 
-export const Text: React.FC<TextProps> = ({ content, color, weight, size }) => {
+export const Text: React.FC<TextProps> = ({
+  content,
+  color,
+  weight,
+  size,
+  maxWidth,
+}) => {
   return (
-    <TextContainer color={color} weight={weight} content={content} size={size}>
+    <TextContainer
+      color={color}
+      weight={weight}
+      content={content}
+      size={size}
+      maxWidth={maxWidth}
+    >
       {content}
     </TextContainer>
   )

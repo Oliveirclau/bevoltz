@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      background-color: ${theme.colors.gray_300};
+      background-color: ${theme.colors.white};
     }
 
     body,

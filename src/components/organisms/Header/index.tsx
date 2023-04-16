@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
   return (
     <HeaderContainer>
       <HeaderArea className="container-content">
-        <Image src={logo} width={150} height={44} alt="Logo escrito beVoltz" />
+        <Image src={logo} width={130} height={24} alt="Logo escrito beVoltz" />
 
         <DesktopNavbar />
         <IconHamburger>
