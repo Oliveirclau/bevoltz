@@ -12,6 +12,8 @@ export interface TextProps {
   maxWidth?: string
   mobileSize?: keyof typeof defaultTheme.font.sizes
   lineHeight?: number
+  mobilePadding?: boolean
+  align?: 'start' | 'center' | 'end'
 }
 
 export const Text: React.FC<TextProps> = ({
@@ -22,6 +24,8 @@ export const Text: React.FC<TextProps> = ({
   maxWidth,
   mobileSize,
   lineHeight,
+  mobilePadding,
+  align,
 }) => {
   return (
     <TextContainer
@@ -32,6 +36,8 @@ export const Text: React.FC<TextProps> = ({
       maxWidth={maxWidth}
       mobileSize={mobileSize}
       lineHeight={lineHeight}
+      mobilePadding={mobilePadding}
+      align={align}
     >
       {content}
     </TextContainer>

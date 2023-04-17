@@ -12,6 +12,8 @@ export interface HeadingProps {
   level: 1 | 2 | 3 | 4 | 5 | 6
   maxWidth?: string
   mobileSize?: keyof typeof defaultTheme.font.sizes
+  mobilePadding?: boolean
+  align?: 'start' | 'center' | 'end'
 }
 
 export const Heading: React.FC<HeadingProps> = ({
@@ -22,6 +24,8 @@ export const Heading: React.FC<HeadingProps> = ({
   size,
   maxWidth,
   mobileSize,
+  mobilePadding,
+  align,
 }) => {
   return (
     <HeadingContainer
@@ -32,6 +36,8 @@ export const Heading: React.FC<HeadingProps> = ({
       size={size}
       maxWidth={maxWidth}
       mobileSize={mobileSize}
+      mobilePadding={mobilePadding}
+      align={align}
     >
       {content}
     </HeadingContainer>

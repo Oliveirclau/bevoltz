@@ -14,6 +14,8 @@ export const HeadingContainer = styled('h1').attrs<HeadingProps>(
     size = 'medium',
     maxWidth = '100%',
     mobileSize = size,
+    mobilePadding = false,
+    align = 'start',
     theme,
   }) => css`
     color: ${theme.colors[color]};
@@ -21,6 +23,12 @@ export const HeadingContainer = styled('h1').attrs<HeadingProps>(
     font-weight: ${theme.font.weights[weight]};
     max-width: ${maxWidth};
     line-height: 120%;
+    text-align: ${align};
+
+    ${mobilePadding &&
+    css`
+      padding: 0px 32px;
+    `}
 
     @media (max-width: 1000px) {
       font-size: ${theme.font.sizes[mobileSize]};
