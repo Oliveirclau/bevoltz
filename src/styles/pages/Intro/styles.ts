@@ -106,11 +106,13 @@ export const JourneyArea = styled('div')`
 `
 
 export const StationContainer = styled('div')`
-  padding: 132px 0px;
+  padding-top: 132px;
+  padding-bottom: 132px;
 `
 
 export const StationArea = styled('div')`
-  padding: 132px 0px;
+  padding-top: 132px;
+  padding-bottom: 132px;
 `
 
 export const StationSearch = styled('div')`
