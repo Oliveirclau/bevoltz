@@ -90,6 +90,10 @@ export const JourneyContainer = styled('div')`
 export const JourneyArea = styled('div')`
   max-width: 1200px;
   margin: 0 auto;
+  padding: 130px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
 
   img {
     width: 100%;
@@ -101,16 +105,50 @@ export const JourneyArea = styled('div')`
   }
 `
 
-export const JourneyTextBox = styled('div')`
+export const StationContainer = styled('div')`
+  padding: 132px 0px;
+`
+
+export const StationArea = styled('div')`
+  padding: 132px 0px;
+`
+
+export const StationSearch = styled('div')`
+  display: flex;
+  margin-top: 90px;
+
+  gap: 35px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+`
+
+export const StationMapBox = styled('div')`
+  display: flex;
+  margin-top: 30px;
+  gap: 50px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+`
+
+export const StationMap = styled('div')`
+  flex: 1;
+  height: 400px;
+
+  img {
+    width: 100%;
+  }
+`
+
+export const StationFilter = styled('div')`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
   gap: 20px;
-  padding: 130px 0px;
-
-  h1,
-  p {
-    text-align: center;
-  }
+  height: 400px;
+  overflow-y: scroll;
+  padding-right: 20px;
 `

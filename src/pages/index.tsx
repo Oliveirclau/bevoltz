@@ -2,14 +2,17 @@ import Image from 'next/image'
 
 import { Button } from '@components/atoms/Button'
 import { Heading } from '@components/atoms/Heading'
+import { InputSelect } from '@components/atoms/Input'
 import { Text } from '@components/atoms/Text'
+import { StationCard } from '@components/molecules/StationCard'
+import { TitleSection } from '@components/molecules/TitleSection'
 import { Header } from '@components/organisms/Header'
 
 import introBannerDireita from '@assets/intro-banner-direita.png'
 import introBannerEsquerda from '@assets/intro-banner-esquerda.png'
 import introBanner from '@assets/intro-banner.png'
 import journeySvg from '@assets/jorney.svg'
-import journey from '@assets/journey.png'
+import map from '@assets/map.png'
 import {
   ImageBox,
   InfoArea,
@@ -18,8 +21,13 @@ import {
   IntroContainer,
   JourneyArea,
   JourneyContainer,
-  JourneyTextBox,
   Separator,
+  StationArea,
+  StationContainer,
+  StationFilter,
+  StationMap,
+  StationMapBox,
+  StationSearch,
   TextBox,
 } from '@styles/pages/Intro/styles'
 
@@ -103,32 +111,49 @@ export default function Home() {
 
       <JourneyContainer>
         <JourneyArea>
-          <JourneyTextBox>
-            <Heading
-              content="Reserve, Abasteça, Pague"
-              color="gray_300"
-              size="xlarge"
-              level={1}
-              mobileSize="large"
-              align="center"
-              mobilePadding={true}
-            />
-
-            <Text
-              content="Aprimoramos a experiência de carregamento, combinando design intuitivo, tecnologia de ponta e um compromisso inabalável com a sustentabilidade."
-              color="gray_100"
-              size="xsmall"
-              mobileSize="xxsmall"
-              lineHeight={160}
-              maxWidth="647px"
-              align="center"
-              mobilePadding={true}
-            />
-          </JourneyTextBox>
+          <TitleSection
+            title="Reserve, Abasteça, Pague"
+            subtitle="Aprimoramos a experiência de carregamento, combinando design intuitivo, tecnologia de ponta e um compromisso inabalável com a sustentabilidade."
+            subtitleWidth="647px"
+          />
 
           <Image src={journeySvg} width={100} height={100} alt="jornadinha" />
         </JourneyArea>
       </JourneyContainer>
+
+      <StationContainer className="container-content">
+        <StationArea>
+          <TitleSection
+            title="Mais de 200 estações espalhadas por 52 cidades no Brasil"
+            titleWidth="693px"
+            subtitle="Selecione a cidade e categoria e veja as estações disponiveis para recarga
+          mais próxima da sua região"
+            subtitleWidth="647px"
+          />
+
+          <StationSearch>
+            <InputSelect
+              label="Cidade:"
+              options={['São Paulo', 'Rio de janeiro', 'Minas Gerais']}
+            />
+            <InputSelect
+              label="Categoria:"
+              options={['Estacionamento', 'Farmácia', 'Shopping']}
+            />
+          </StationSearch>
+
+          <StationMapBox>
+            <StationFilter>
+              <StationCard />
+              <StationCard />
+              <StationCard />
+            </StationFilter>
+            <StationMap>
+              <Image src={map} width={695} height={413} alt="map" />
+            </StationMap>
+          </StationMapBox>
+        </StationArea>
+      </StationContainer>
     </>
   )
 }
