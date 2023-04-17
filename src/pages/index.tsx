@@ -8,12 +8,17 @@ import { Header } from '@components/organisms/Header'
 import introBannerDireita from '@assets/intro-banner-direita.png'
 import introBannerEsquerda from '@assets/intro-banner-esquerda.png'
 import introBanner from '@assets/intro-banner.png'
+import journeySvg from '@assets/jorney.svg'
+import journey from '@assets/journey.png'
 import {
   ImageBox,
   InfoArea,
   InfoBoxText,
   InfoContainer,
   IntroContainer,
+  JourneyArea,
+  JourneyContainer,
+  JourneyTextBox,
   Separator,
   TextBox,
 } from '@styles/pages/Intro/styles'
@@ -91,6 +96,31 @@ export default function Home() {
           </InfoBoxText>
         </InfoArea>
       </InfoContainer>
+
+      <JourneyContainer>
+        <JourneyArea>
+          <JourneyTextBox>
+            <Heading
+              content="Reserve, Abasteça, Pague"
+              color="gray_300"
+              size="xlarge"
+              level={1}
+              mobileSize="large"
+            />
+
+            <Text
+              content="Aprimoramos a experiência de carregamento, combinando design intuitivo, tecnologia de ponta e um compromisso inabalável com a sustentabilidade."
+              color="gray_100"
+              size="xsmall"
+              mobileSize="xxsmall"
+              lineHeight={160}
+              maxWidth="647px"
+            />
+          </JourneyTextBox>
+
+          <Image src={journeySvg} width={100} height={100} alt="jornadinha" />
+        </JourneyArea>
+      </JourneyContainer>
     </>
   )
 }
