@@ -23,13 +23,13 @@ export const TextContainer = styled('p')<TextProps>`
 
     text-align: ${align};
 
-    ${mobilePadding &&
-    css`
-      padding: 0px 32px;
-    `}
-
     @media (max-width: 1000px) {
       font-size: ${theme.font.sizes[mobileSize]};
+
+      ${mobilePadding &&
+      css`
+        padding: 0px 32px;
+      `}
     }
   `}
 `

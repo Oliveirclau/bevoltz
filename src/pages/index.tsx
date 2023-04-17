@@ -37,6 +37,8 @@ export default function Home() {
             level={1}
             maxWidth="973px"
             mobileSize="large"
+            align="center"
+            mobilePadding={true}
           />
 
           <Text
@@ -45,6 +47,8 @@ export default function Home() {
             size="xsmall"
             mobileSize="xxsmall"
             maxWidth="708px"
+            align="center"
+            mobilePadding={true}
           />
 
           <Button content="Conheça a beVoltz" variant="primary" />
@@ -106,6 +110,8 @@ export default function Home() {
               size="xlarge"
               level={1}
               mobileSize="large"
+              align="center"
+              mobilePadding={true}
             />
 
             <Text
@@ -115,6 +121,8 @@ export default function Home() {
               mobileSize="xxsmall"
               lineHeight={160}
               maxWidth="647px"
+              align="center"
+              mobilePadding={true}
             />
           </JourneyTextBox>
 

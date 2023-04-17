@@ -18,11 +18,6 @@ export const TextBox = styled('div')`
   align-items: center;
   gap: 3rem;
   padding: 6rem 0px;
-
-  h1,
-  p {
-    text-align: center;
-  }
 `
 
 export const ImageBox = styled('div')`
