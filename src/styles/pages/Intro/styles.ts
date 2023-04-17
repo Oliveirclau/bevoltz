@@ -84,3 +84,38 @@ export const Separator = styled('div')`
     background-color: ${theme.colors.gray_100};
   `}
 `
+
+export const JourneyContainer = styled('div')`
+  ${({ theme }) => css`
+    width: 100%;
+    background-color: ${theme.colors.gray_50};
+  `}
+`
+
+export const JourneyArea = styled('div')`
+  max-width: 1200px;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1440px) {
+    max-width: 100%;
+  }
+`
+
+export const JourneyTextBox = styled('div')`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 130px 0px;
+
+  h1,
+  p {
+    text-align: center;
+  }
+`
