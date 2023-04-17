@@ -11,6 +11,8 @@ export const TextContainer = styled('p')<TextProps>`
     maxWidth = '100%',
     mobileSize = size,
     lineHeight = '135',
+    mobilePadding = false,
+    align = 'start',
     theme,
   }) => css`
     color: ${theme.colors[color]};
@@ -18,6 +20,13 @@ export const TextContainer = styled('p')<TextProps>`
     font-weight: ${theme.font.weights[weight]};
     max-width: ${maxWidth};
     line-height: ${`${lineHeight}%`};
+
+    text-align: ${align};
+
+    ${mobilePadding &&
+    css`
+      padding: 0px 32px;
+    `}
 
     @media (max-width: 1000px) {
       font-size: ${theme.font.sizes[mobileSize]};
