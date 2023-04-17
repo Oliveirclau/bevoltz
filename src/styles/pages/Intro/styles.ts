@@ -138,10 +138,11 @@ export const StationMapBox = styled('div')`
 
 export const StationMap = styled('div')`
   flex: 1.8;
-  height: 400px;
+  max-height: 400px;
 
   img {
     width: 100%;
+    height: auto;
   }
 `
 
