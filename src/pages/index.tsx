@@ -8,12 +8,19 @@ import { StationCard } from '@components/molecules/StationCard'
 import { TitleSection } from '@components/molecules/TitleSection'
 import { Header } from '@components/organisms/Header'
 
+import appleStore from '@assets/apple-store.svg'
+import googlePlay from '@assets/google-play.svg'
 import introBannerDireita from '@assets/intro-banner-direita.png'
 import introBannerEsquerda from '@assets/intro-banner-esquerda.png'
 import introBanner from '@assets/intro-banner.png'
+import iphone from '@assets/iphone.png'
 import journeySvg from '@assets/jorney.svg'
 import map from '@assets/map.png'
 import {
+  AppArea,
+  AppContainer,
+  AppTextBox,
+  AppTextImage,
   ImageBox,
   InfoArea,
   InfoBoxText,
@@ -28,6 +35,7 @@ import {
   StationMap,
   StationMapBox,
   StationSearch,
+  StoreIcons,
   TextBox,
 } from '@styles/pages/Intro/styles'
 
@@ -154,6 +162,41 @@ export default function Home() {
           </StationMapBox>
         </StationArea>
       </StationContainer>
+
+      <AppContainer>
+        <AppArea className="container-content">
+          <AppTextBox>
+            <Heading
+              content="O aplicativo beVoltz está disponivel nas principais plataformas"
+              color="black"
+              size="xlarge"
+              level={2}
+              maxWidth="630px"
+              mobileSize="large"
+              mobilePadding={true}
+            />
+
+            <StoreIcons>
+              <Image
+                src={appleStore}
+                width={178.56}
+                height={54.71}
+                alt="ícone apple store"
+              />
+              <Image
+                src={googlePlay}
+                width={178.56}
+                height={54.71}
+                alt="ícone google play"
+              />
+            </StoreIcons>
+          </AppTextBox>
+
+          <AppTextImage>
+            <Image src={iphone} width={406.17} height={829} alt="Iphone" />
+          </AppTextImage>
+        </AppArea>
+      </AppContainer>
     </>
   )
 }

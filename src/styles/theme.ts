@@ -40,6 +40,7 @@ const defaultTheme = {
   },
   colors: {
     white: '#fff',
+    black: '#000',
 
     green_100: '#61E4A3',
     green_300: '#223739',

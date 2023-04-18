@@ -155,3 +155,56 @@ export const StationFilter = styled('div')`
   overflow-y: scroll;
   padding-right: 20px;
 `
+
+export const AppContainer = styled('div')`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.green_100};
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 200px;
+
+    @media (max-width: 1000px) {
+      margin-top: 0px;
+    }
+  `}
+`
+export const AppArea = styled('div')`
+  display: flex;
+  gap: 70px;
+  padding: 20px 0px;
+  position: relative;
+`
+
+export const StoreIcons = styled('div')`
+  display: flex;
+  gap: 30px;
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+`
+
+export const AppTextBox = styled('div')`
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  @media (max-width: 1000px) {
+    h2,
+    p {
+      text-align: center;
+    }
+  }
+`
+
+export const AppTextImage = styled('div')`
+  position: absolute;
+  right: 0px;
+  top: -250px;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+`
