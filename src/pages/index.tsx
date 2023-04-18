@@ -2,15 +2,32 @@ import Image from 'next/image'
 
 import { Button } from '@components/atoms/Button'
 import { Heading } from '@components/atoms/Heading'
+import { InputSelect } from '@components/atoms/Input'
 import { Text } from '@components/atoms/Text'
+import { StationCard } from '@components/molecules/StationCard'
+import { TitleSection } from '@components/molecules/TitleSection'
 import { Header } from '@components/organisms/Header'
 
+import appleStore from '@assets/apple-store.svg'
+import googlePlay from '@assets/google-play.svg'
 import introBannerDireita from '@assets/intro-banner-direita.png'
 import introBannerEsquerda from '@assets/intro-banner-esquerda.png'
 import introBanner from '@assets/intro-banner.png'
+import iphone from '@assets/iphone.png'
 import journeySvg from '@assets/jorney.svg'
-import journey from '@assets/journey.png'
+import map from '@assets/map.png'
+import { CaretDown, CaretUp } from '@phosphor-icons/react'
+import * as Accordion from '@radix-ui/react-accordion'
 import {
+  AccordionContainer,
+  AccordionRoot,
+  AccordionTrigger,
+  AppArea,
+  AppContainer,
+  AppTextBox,
+  AppTextImage,
+  FaqArea,
+  FaqContainer,
   ImageBox,
   InfoArea,
   InfoBoxText,
@@ -18,9 +35,16 @@ import {
   IntroContainer,
   JourneyArea,
   JourneyContainer,
-  JourneyTextBox,
   Separator,
+  StationArea,
+  StationContainer,
+  StationFilter,
+  StationMap,
+  StationMapBox,
+  StationSearch,
+  StoreIcons,
   TextBox,
+  AccordionContent,
 } from '@styles/pages/Intro/styles'
 
 export default function Home() {
@@ -37,6 +61,8 @@ export default function Home() {
             level={1}
             maxWidth="973px"
             mobileSize="large"
+            align="center"
+            mobilePadding={true}
           />
 
           <Text
@@ -45,6 +71,8 @@ export default function Home() {
             size="xsmall"
             mobileSize="xxsmall"
             maxWidth="708px"
+            align="center"
+            mobilePadding={true}
           />
 
           <Button content="Conheça a beVoltz" variant="primary" />
@@ -99,28 +127,175 @@ export default function Home() {
 
       <JourneyContainer>
         <JourneyArea>
-          <JourneyTextBox>
-            <Heading
-              content="Reserve, Abasteça, Pague"
-              color="gray_300"
-              size="xlarge"
-              level={1}
-              mobileSize="large"
-            />
-
-            <Text
-              content="Aprimoramos a experiência de carregamento, combinando design intuitivo, tecnologia de ponta e um compromisso inabalável com a sustentabilidade."
-              color="gray_100"
-              size="xsmall"
-              mobileSize="xxsmall"
-              lineHeight={160}
-              maxWidth="647px"
-            />
-          </JourneyTextBox>
+          <TitleSection
+            title="Reserve, Abasteça, Pague"
+            subtitle="Aprimoramos a experiência de carregamento, combinando design intuitivo, tecnologia de ponta e um compromisso inabalável com a sustentabilidade."
+            subtitleWidth="647px"
+          />
 
           <Image src={journeySvg} width={100} height={100} alt="jornadinha" />
         </JourneyArea>
       </JourneyContainer>
+
+      <StationContainer className="container-content">
+        <StationArea>
+          <TitleSection
+            title="Mais de 200 estações espalhadas por 52 cidades no Brasil"
+            titleWidth="693px"
+            subtitle="Selecione a cidade e categoria e veja as estações disponiveis para recarga
+          mais próxima da sua região"
+            subtitleWidth="647px"
+          />
+
+          <StationSearch>
+            <InputSelect
+              label="Cidade:"
+              options={['São Paulo', 'Rio de janeiro', 'Minas Gerais']}
+            />
+            <InputSelect
+              label="Categoria:"
+              options={['Estacionamento', 'Farmácia', 'Shopping']}
+            />
+          </StationSearch>
+
+          <StationMapBox>
+            <StationFilter>
+              <StationCard />
+              <StationCard />
+              <StationCard />
+            </StationFilter>
+            <StationMap>
+              <Image src={map} width={695} height={413} alt="map" />
+            </StationMap>
+          </StationMapBox>
+        </StationArea>
+      </StationContainer>
+
+      <AppContainer>
+        <AppArea className="container-content">
+          <AppTextBox>
+            <Heading
+              content="O aplicativo beVoltz está disponivel nas principais plataformas"
+              color="black"
+              size="xlarge"
+              level={2}
+              maxWidth="630px"
+              mobileSize="large"
+              mobilePadding={true}
+            />
+
+            <StoreIcons>
+              <Image
+                src={appleStore}
+                width={178.56}
+                height={54.71}
+                alt="ícone apple store"
+              />
+              <Image
+                src={googlePlay}
+                width={178.56}
+                height={54.71}
+                alt="ícone google play"
+              />
+            </StoreIcons>
+          </AppTextBox>
+
+          <AppTextImage>
+            <Image src={iphone} width={406.17} height={829} alt="Iphone" />
+          </AppTextImage>
+        </AppArea>
+      </AppContainer>
+
+      <FaqContainer>
+        <FaqArea className="container-content">
+          <TitleSection
+            title="Mais de 200 estações espalhadas por 52 cidades no Brasil"
+            titleWidth="693px"
+            subtitle="Selecione a cidade e categoria e veja as estações disponiveis para recarga
+          mais próxima da sua região"
+            subtitleWidth="647px"
+          />
+
+          <AccordionContainer>
+            <AccordionRoot type="multiple">
+              <Accordion.Item value="item-1">
+                <Accordion.Header>
+                  <AccordionTrigger>
+                    <Heading
+                      content="É possível carregar motos na estação?"
+                      color="gray_300"
+                      size="medium"
+                      level={1}
+                      mobileSize="small"
+                    />
+                    <CaretDown size={30} weight="bold" className="iconClosed" />
+                    <CaretUp size={30} weight="bold" className="iconOpen" />
+                  </AccordionTrigger>
+                </Accordion.Header>
+                <AccordionContent>
+                  <Text
+                    content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen"
+                    color="gray_100"
+                    size="xsmall"
+                    mobileSize="xxsmall"
+                    maxWidth="1000px"
+                  />
+                </AccordionContent>
+              </Accordion.Item>
+
+              <Accordion.Item value="item-2">
+                <Accordion.Header>
+                  <AccordionTrigger>
+                    <Heading
+                      content="É possível carregar motos na estação?"
+                      color="gray_300"
+                      size="medium"
+                      level={1}
+                      mobileSize="small"
+                    />
+                    <CaretDown size={30} weight="bold" className="iconClosed" />
+                    <CaretUp size={30} weight="bold" className="iconOpen" />
+                  </AccordionTrigger>
+                </Accordion.Header>
+                <AccordionContent>
+                  <Text
+                    content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen"
+                    color="gray_100"
+                    size="xsmall"
+                    mobileSize="xxsmall"
+                    maxWidth="1000px"
+                  />
+                </AccordionContent>
+              </Accordion.Item>
+
+              <Accordion.Item value="item-3">
+                <Accordion.Header>
+                  <AccordionTrigger>
+                    <Heading
+                      content="É possível carregar motos na estação?"
+                      color="gray_300"
+                      size="medium"
+                      level={1}
+                      mobileSize="small"
+                    />
+                    <CaretDown size={30} weight="bold" className="iconClosed" />
+                    <CaretUp size={30} weight="bold" className="iconOpen" />
+                  </AccordionTrigger>
+                </Accordion.Header>
+                <AccordionContent>
+                  <Text
+                    content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen"
+                    color="gray_100"
+                    size="xsmall"
+                    mobileSize="xxsmall"
+                    maxWidth="1000px"
+                  />
+                </AccordionContent>
+              </Accordion.Item>
+            </AccordionRoot>
+          </AccordionContainer>
+        </FaqArea>
+      </FaqContainer>
     </>
   )
 }

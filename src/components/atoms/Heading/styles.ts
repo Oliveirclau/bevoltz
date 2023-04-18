@@ -25,13 +25,13 @@ export const HeadingContainer = styled('h1').attrs<HeadingProps>(
     line-height: 120%;
     text-align: ${align};
 
-    ${mobilePadding &&
-    css`
-      padding: 0px 32px;
-    `}
-
     @media (max-width: 1000px) {
       font-size: ${theme.font.sizes[mobileSize]};
+
+      ${mobilePadding &&
+      css`
+        padding: 0px 22px;
+      `}
     }
   `}
 `

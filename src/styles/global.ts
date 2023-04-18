@@ -55,6 +55,19 @@ const GlobalStyles = createGlobalStyle`
 
     }
   }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #EEEFF0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #61E4A3;
+    border-radius: 20px;
+  }
 `
 
 export default GlobalStyles
