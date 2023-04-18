@@ -10,6 +10,10 @@ import logo from '@assets/logo.svg'
 import { ArrowUp } from '@phosphor-icons/react'
 
 export const Footer: React.FC = () => {
+  function handleBackToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <FooterContainer>
       <FooterArea className="container-content">
@@ -29,6 +33,7 @@ export const Footer: React.FC = () => {
         variant="primary"
         icon={<ArrowUp />}
         className="backTop"
+        onClick={handleBackToTop}
       />
     </FooterContainer>
   )

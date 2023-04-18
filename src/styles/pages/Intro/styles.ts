@@ -144,9 +144,9 @@ export const StationMap = styled('div')`
   flex: 1.8;
   max-height: 400px;
 
-  img {
+  iframe {
     width: 100%;
-    height: auto;
+    border-radius: 10px;
   }
 `
 

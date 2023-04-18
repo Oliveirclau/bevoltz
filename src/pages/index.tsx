@@ -170,7 +170,15 @@ export default function Home() {
               <StationCard />
             </StationFilter>
             <StationMap>
-              <Image src={map} width={695} height={413} alt="map" />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14637.396939834474!2d-46.64157255!3d-23.483927249999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1681861588012!5m2!1spt-BR!2sbr"
+                width="695"
+                height="413"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </StationMap>
           </StationMapBox>
         </StationArea>
@@ -214,11 +222,10 @@ export default function Home() {
       <FaqContainer>
         <FaqArea className="container-content">
           <TitleSection
-            title="Mais de 200 estações espalhadas por 52 cidades no Brasil"
+            title="Perguntas Frequentes"
             titleWidth="693px"
-            subtitle="Selecione a cidade e categoria e veja as estações disponiveis para recarga
-          mais próxima da sua região"
-            subtitleWidth="647px"
+            subtitle="Tire suas dúvidas sobre a plataforma beVoltz com este guia de perguntas frequentes"
+            subtitleWidth="400px"
           />
 
           <AccordionContainer>
