@@ -301,7 +301,7 @@ export const PartnerContainer = styled('div')`
     width: 100%;
     position: relative;
     background-color: ${theme.colors.green_100};
-    height: 40rem;
+    height: 44rem;
 
     img {
       right: 0;
@@ -311,6 +311,10 @@ export const PartnerContainer = styled('div')`
       @media (max-width: 1090px) {
         display: none;
       }
+    }
+
+    @media (max-width: 1000px) {
+      height: 50rem;
     }
   `}
 `

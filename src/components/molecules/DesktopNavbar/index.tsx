@@ -5,7 +5,13 @@ import { LinkText } from '@components/atoms/LinkText'
 
 import { MenuContainer, MenuItem, NavbarContainer } from './styles'
 
-export const DesktopNavbar: React.FC = () => {
+interface DesktopNavbar {
+  partnerButton?: boolean
+}
+
+export const DesktopNavbar: React.FC<DesktopNavbar> = ({
+  partnerButton = true,
+}) => {
   return (
     <NavbarContainer>
       <MenuContainer>
@@ -26,7 +32,9 @@ export const DesktopNavbar: React.FC = () => {
         </MenuItem>
       </MenuContainer>
 
-      <Button content="Seja um Parceiro" variant="secondary" />
+      {partnerButton && (
+        <Button content="Seja um Parceiro" variant="secondary" />
+      )}
     </NavbarContainer>
   )
 }

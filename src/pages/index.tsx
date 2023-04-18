@@ -6,6 +6,7 @@ import { InputSelect } from '@components/atoms/Input'
 import { Text } from '@components/atoms/Text'
 import { StationCard } from '@components/molecules/StationCard'
 import { TitleSection } from '@components/molecules/TitleSection'
+import { Footer } from '@components/organisms/Footer'
 import { Header } from '@components/organisms/Header'
 
 import appleStore from '@assets/apple-store.svg'
@@ -336,6 +337,8 @@ export default function Home() {
           />
         </PartnerArea>
       </PartnerContainer>
+
+      <Footer />
     </>
   )
 }

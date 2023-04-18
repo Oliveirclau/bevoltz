@@ -3,15 +3,20 @@ import React from 'react'
 import { Text } from '../Text'
 import { ButtonContainer, IconContainer } from './styles'
 
-export interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   content: string
   variant: 'primary' | 'secondary'
   icon?: React.ReactElement<any, string | React.JSXElementConstructor<any>>
 }
 
-export const Button: React.FC<ButtonProps> = ({ content, variant, icon }) => {
+export const Button: React.FC<ButtonProps> = ({
+  content,
+  variant,
+  icon,
+  ...rest
+}) => {
   return (
-    <ButtonContainer content={content} variant={variant}>
+    <ButtonContainer content={content} variant={variant} {...rest}>
       <Text content={content} color="white" size="xsmall" weight="semiBold" />
 
       {icon && (
