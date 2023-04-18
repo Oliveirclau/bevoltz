@@ -3,7 +3,8 @@ import React from 'react'
 import { Text } from '../Text'
 import { ButtonContainer, IconContainer } from './styles'
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   content: string
   variant: 'primary' | 'secondary'
   icon?: React.ReactElement<any, string | React.JSXElementConstructor<any>>
