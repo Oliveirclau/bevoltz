@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components'
 
+import { CaretDown } from '@phosphor-icons/react'
+import * as Accordion from '@radix-ui/react-accordion'
+
 export const IntroContainer = styled('div')`
   ${({ theme }) => css`
     display: flex;
@@ -207,4 +210,86 @@ export const AppTextImage = styled('div')`
   @media (max-width: 1000px) {
     display: none;
   }
+`
+
+export const FaqContainer = styled('div')`
+  padding: 400px 0px;
+
+  @media (max-width: 1000px) {
+    padding: 200px 0px;
+  }
+`
+
+export const FaqArea = styled('div')`
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+`
+
+export const AccordionContainer = styled('div')``
+
+export const AccordionTrigger = styled(Accordion.Trigger)`
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 23px;
+    border: none;
+    background-color: ${theme.colors.gray_50};
+    border-radius: ${theme.border.radius.medium};
+
+    &[data-state='open'] {
+      border-radius: 10px 10px 0px 0px;
+
+      .iconOpen {
+        display: flex;
+      }
+
+      .iconClosed {
+        display: none;
+      }
+    }
+
+    &[data-state='closed'] {
+      .iconOpen {
+        display: none;
+      }
+
+      .iconClosed {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .iconOpen {
+        display: none;
+      }
+
+      .iconClosed {
+        display: none;
+      }
+    }
+  `}
+`
+
+export const AccordionRoot = styled(Accordion.Root)`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`
+
+export const AccordionContent = styled(Accordion.Content)`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 23px 23px;
+    background-color: ${theme.colors.gray_50};
+    border-radius: 0px 0px 10px 10px;
+
+    &[data-state='closed'] {
+      display: none;
+    }
+  `}
 `

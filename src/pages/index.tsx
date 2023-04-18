@@ -16,11 +16,18 @@ import introBanner from '@assets/intro-banner.png'
 import iphone from '@assets/iphone.png'
 import journeySvg from '@assets/jorney.svg'
 import map from '@assets/map.png'
+import { CaretDown, CaretUp } from '@phosphor-icons/react'
+import * as Accordion from '@radix-ui/react-accordion'
 import {
+  AccordionContainer,
+  AccordionRoot,
+  AccordionTrigger,
   AppArea,
   AppContainer,
   AppTextBox,
   AppTextImage,
+  FaqArea,
+  FaqContainer,
   ImageBox,
   InfoArea,
   InfoBoxText,
@@ -37,6 +44,7 @@ import {
   StationSearch,
   StoreIcons,
   TextBox,
+  AccordionContent,
 } from '@styles/pages/Intro/styles'
 
 export default function Home() {
@@ -197,6 +205,97 @@ export default function Home() {
           </AppTextImage>
         </AppArea>
       </AppContainer>
+
+      <FaqContainer>
+        <FaqArea className="container-content">
+          <TitleSection
+            title="Mais de 200 estações espalhadas por 52 cidades no Brasil"
+            titleWidth="693px"
+            subtitle="Selecione a cidade e categoria e veja as estações disponiveis para recarga
+          mais próxima da sua região"
+            subtitleWidth="647px"
+          />
+
+          <AccordionContainer>
+            <AccordionRoot type="single">
+              <Accordion.Item value="item-1">
+                <Accordion.Header>
+                  <AccordionTrigger>
+                    <Heading
+                      content="É possível carregar motos na estação?"
+                      color="gray_300"
+                      size="medium"
+                      level={1}
+                      mobileSize="small"
+                    />
+                    <CaretDown size={30} weight="bold" className="iconClosed" />
+                    <CaretUp size={30} weight="bold" className="iconOpen" />
+                  </AccordionTrigger>
+                </Accordion.Header>
+                <AccordionContent>
+                  <Text
+                    content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen"
+                    color="gray_100"
+                    size="xsmall"
+                    mobileSize="xxsmall"
+                    maxWidth="1000px"
+                  />
+                </AccordionContent>
+              </Accordion.Item>
+
+              <Accordion.Item value="item-2">
+                <Accordion.Header>
+                  <AccordionTrigger>
+                    <Heading
+                      content="É possível carregar motos na estação?"
+                      color="gray_300"
+                      size="medium"
+                      level={1}
+                      mobileSize="small"
+                    />
+                    <CaretDown size={30} weight="bold" className="iconClosed" />
+                    <CaretUp size={30} weight="bold" className="iconOpen" />
+                  </AccordionTrigger>
+                </Accordion.Header>
+                <AccordionContent>
+                  <Text
+                    content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen"
+                    color="gray_100"
+                    size="xsmall"
+                    mobileSize="xxsmall"
+                    maxWidth="1000px"
+                  />
+                </AccordionContent>
+              </Accordion.Item>
+
+              <Accordion.Item value="item-3">
+                <Accordion.Header>
+                  <AccordionTrigger>
+                    <Heading
+                      content="É possível carregar motos na estação?"
+                      color="gray_300"
+                      size="medium"
+                      level={1}
+                      mobileSize="small"
+                    />
+                    <CaretDown size={30} weight="bold" className="iconClosed" />
+                    <CaretUp size={30} weight="bold" className="iconOpen" />
+                  </AccordionTrigger>
+                </Accordion.Header>
+                <AccordionContent>
+                  <Text
+                    content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen"
+                    color="gray_100"
+                    size="xsmall"
+                    mobileSize="xxsmall"
+                    maxWidth="1000px"
+                  />
+                </AccordionContent>
+              </Accordion.Item>
+            </AccordionRoot>
+          </AccordionContainer>
+        </FaqArea>
+      </FaqContainer>
     </>
   )
 }
