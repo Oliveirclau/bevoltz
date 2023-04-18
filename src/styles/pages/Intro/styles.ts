@@ -102,10 +102,6 @@ export const JourneyArea = styled('div')`
     width: 100%;
     height: auto;
   }
-
-  @media (max-width: 1440px) {
-    max-width: 100%;
-  }
 `
 
 export const StationContainer = styled('div')`
