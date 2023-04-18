@@ -30,7 +30,7 @@ export const HeadingContainer = styled('h1').attrs<HeadingProps>(
 
       ${mobilePadding &&
       css`
-        padding: 0px 32px;
+        padding: 0px 22px;
       `}
     }
   `}

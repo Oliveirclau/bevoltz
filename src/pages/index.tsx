@@ -217,7 +217,7 @@ export default function Home() {
           />
 
           <AccordionContainer>
-            <AccordionRoot type="single">
+            <AccordionRoot type="multiple">
               <Accordion.Item value="item-1">
                 <Accordion.Header>
                   <AccordionTrigger>

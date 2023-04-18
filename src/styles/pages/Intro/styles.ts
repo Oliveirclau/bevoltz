@@ -111,6 +111,11 @@ export const JourneyArea = styled('div')`
 export const StationContainer = styled('div')`
   padding-top: 132px;
   padding-bottom: 132px;
+
+  @media (max-width: 500px) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 `
 
 export const StationArea = styled('div')`
@@ -261,13 +266,9 @@ export const AccordionTrigger = styled(Accordion.Trigger)`
       }
     }
 
-    @media (max-width: 1000px) {
-      .iconOpen {
-        display: none;
-      }
-
-      .iconClosed {
-        display: none;
+    @media (max-width: 500px) {
+      svg {
+        display: none !important;
       }
     }
   `}

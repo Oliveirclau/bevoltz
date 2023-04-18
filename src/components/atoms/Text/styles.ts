@@ -28,7 +28,7 @@ export const TextContainer = styled('p')<TextProps>`
 
       ${mobilePadding &&
       css`
-        padding: 0px 32px;
+        padding: 0px 22px;
       `}
     }
   `}
