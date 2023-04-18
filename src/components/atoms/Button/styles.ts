@@ -16,6 +16,7 @@ export const ButtonContainer = styled('button')<ButtonProps>`
     align-items: center;
     gap: 10px;
 
+    max-width: 230px;
     min-width: 130px;
     padding: 10px 16px;
     border: none;

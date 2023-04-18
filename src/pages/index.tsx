@@ -9,6 +9,7 @@ import { TitleSection } from '@components/molecules/TitleSection'
 import { Header } from '@components/organisms/Header'
 
 import appleStore from '@assets/apple-store.svg'
+import carPartner from '@assets/carPartner.png'
 import googlePlay from '@assets/google-play.svg'
 import introBannerDireita from '@assets/intro-banner-direita.png'
 import introBannerEsquerda from '@assets/intro-banner-esquerda.png'
@@ -16,7 +17,7 @@ import introBanner from '@assets/intro-banner.png'
 import iphone from '@assets/iphone.png'
 import journeySvg from '@assets/jorney.svg'
 import map from '@assets/map.png'
-import { CaretDown, CaretUp } from '@phosphor-icons/react'
+import { ArrowRight, CaretDown, CaretUp } from '@phosphor-icons/react'
 import * as Accordion from '@radix-ui/react-accordion'
 import {
   AccordionContainer,
@@ -45,6 +46,9 @@ import {
   StoreIcons,
   TextBox,
   AccordionContent,
+  PartnerContainer,
+  PartnerArea,
+  PartnerTextBox,
 } from '@styles/pages/Intro/styles'
 
 export default function Home() {
@@ -296,6 +300,42 @@ export default function Home() {
           </AccordionContainer>
         </FaqArea>
       </FaqContainer>
+
+      <PartnerContainer>
+        <PartnerArea className="container-content">
+          <PartnerTextBox>
+            <Heading
+              content="Conectando motoristas e estações de carregamento em uma rede global unificada."
+              color="black"
+              size="large"
+              level={1}
+              maxWidth="520px"
+              mobileSize="medium"
+            />
+
+            <Text
+              content="Ofereça a seus clientes opções de recarga de veículos elétricos e alavanque sua empresa na era da sustentabilidade"
+              color="green_300"
+              size="xsmall"
+              mobileSize="xxsmall"
+              maxWidth="520px"
+              weight="medium"
+            />
+
+            <Button
+              content="Quero ser um parceiro"
+              variant="primary"
+              icon={<ArrowRight />}
+            />
+          </PartnerTextBox>
+          <Image
+            src={carPartner}
+            width={553}
+            height={401}
+            alt="Carro partner"
+          />
+        </PartnerArea>
+      </PartnerContainer>
     </>
   )
 }

@@ -218,10 +218,10 @@ export const AppTextImage = styled('div')`
 `
 
 export const FaqContainer = styled('div')`
-  padding: 400px 0px;
+  padding: 400px 0 200px 0;
 
   @media (max-width: 1000px) {
-    padding: 200px 0px;
+    padding: 200px 0px 100px 0;
   }
 `
 
@@ -293,4 +293,36 @@ export const AccordionContent = styled(Accordion.Content)`
       display: none;
     }
   `}
+`
+
+export const PartnerContainer = styled('div')`
+  ${({ theme }) => css`
+    display: flex;
+    width: 100%;
+    position: relative;
+    background-color: ${theme.colors.green_100};
+    height: 40rem;
+
+    img {
+      right: 0;
+      top: 0;
+      position: absolute;
+
+      @media (max-width: 1090px) {
+        display: none;
+      }
+    }
+  `}
+`
+
+export const PartnerArea = styled('div')`
+  img {
+    max-width: 56rem;
+  }
+`
+
+export const PartnerTextBox = styled('div')`
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 `
