@@ -16,7 +16,7 @@ export const LinkText: React.FC<LinkTextProps> = ({
   ...rest
 }) => {
   return (
-    <Link {...rest}>
+    <Link {...rest} scroll={false}>
       <LinkTextContainer
         color={color}
         weight={weight}

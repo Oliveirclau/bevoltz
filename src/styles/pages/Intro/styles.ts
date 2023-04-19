@@ -165,6 +165,7 @@ export const AppContainer = styled('div')`
     padding-top: 100px;
     padding-bottom: 100px;
     margin-top: 200px;
+    margin-bottom: 320px;
 
     @media (max-width: 1000px) {
       margin-top: 0px;
@@ -213,10 +214,10 @@ export const AppTextImage = styled('div')`
 `
 
 export const FaqContainer = styled('div')`
-  padding: 400px 0 200px 0;
+  padding: 80px 0 200px 0;
 
   @media (max-width: 1000px) {
-    padding: 200px 0px 100px 0;
+    padding: 8px 0px 100px 0;
   }
 `
 

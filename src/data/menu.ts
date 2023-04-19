@@ -9,14 +9,14 @@ export const menu = [
   },
   {
     name: 'Estações',
-    href: '#estações',
-  },
-  {
-    name: 'Faq',
-    href: '#faq',
+    href: '#estacoes',
   },
   {
     name: 'Aplicativo',
     href: '#aplicativo',
+  },
+  {
+    name: 'Faq',
+    href: '#faq',
   },
 ]

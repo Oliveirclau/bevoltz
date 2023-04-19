@@ -141,7 +141,7 @@ export default function Home() {
         </JourneyArea>
       </JourneyContainer>
 
-      <StationContainer id="estações" className="container-content">
+      <StationContainer id="estacoes" className="container-content">
         <StationArea>
           <TitleSection
             title="Mais de 200 estações espalhadas por 52 cidades no Brasil"
@@ -218,8 +218,8 @@ export default function Home() {
         </AppArea>
       </AppContainer>
 
-      <FaqContainer>
-        <FaqArea className="container-content" id="faq">
+      <FaqContainer id="faq">
+        <FaqArea className="container-content">
           <TitleSection
             title="Perguntas Frequentes"
             titleWidth="693px"
