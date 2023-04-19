@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
@@ -13,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
   ${({ theme }) => css`
     html {
       font-size: 62.5%;
+      scroll-behavior: smooth;
     }
 
     body {

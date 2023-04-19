@@ -16,7 +16,7 @@ export const LinkText: React.FC<LinkTextProps> = ({
   ...rest
 }) => {
   return (
-    <Link {...rest} target="_blank">
+    <Link {...rest}>
       <LinkTextContainer
         color={color}
         weight={weight}

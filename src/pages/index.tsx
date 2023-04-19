@@ -17,7 +17,6 @@ import introBannerEsquerda from '@assets/intro-banner-esquerda.png'
 import introBanner from '@assets/intro-banner.png'
 import iphone from '@assets/iphone.png'
 import journeySvg from '@assets/jorney.svg'
-import map from '@assets/map.png'
 import { ArrowRight, CaretDown, CaretUp } from '@phosphor-icons/react'
 import * as Accordion from '@radix-ui/react-accordion'
 import {
@@ -130,7 +129,7 @@ export default function Home() {
         </InfoArea>
       </InfoContainer>
 
-      <JourneyContainer>
+      <JourneyContainer id="sobre">
         <JourneyArea>
           <TitleSection
             title="Reserve, Abasteça, Pague"
@@ -142,7 +141,7 @@ export default function Home() {
         </JourneyArea>
       </JourneyContainer>
 
-      <StationContainer className="container-content">
+      <StationContainer id="estações" className="container-content">
         <StationArea>
           <TitleSection
             title="Mais de 200 estações espalhadas por 52 cidades no Brasil"
@@ -184,7 +183,7 @@ export default function Home() {
         </StationArea>
       </StationContainer>
 
-      <AppContainer>
+      <AppContainer id="aplicativo">
         <AppArea className="container-content">
           <AppTextBox>
             <Heading
@@ -220,7 +219,7 @@ export default function Home() {
       </AppContainer>
 
       <FaqContainer>
-        <FaqArea className="container-content">
+        <FaqArea className="container-content" id="faq">
           <TitleSection
             title="Perguntas Frequentes"
             titleWidth="693px"

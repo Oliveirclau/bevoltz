@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 
-import { CaretDown } from '@phosphor-icons/react'
 import * as Accordion from '@radix-ui/react-accordion'
 
 export const IntroContainer = styled('div')`
