@@ -19,6 +19,7 @@ import iphone from '@assets/iphone.png'
 import journeySvg from '@assets/jorney.svg'
 import { ArrowRight, CaretDown, CaretUp } from '@phosphor-icons/react'
 import * as Accordion from '@radix-ui/react-accordion'
+import { GoogleMap, useJsApiLoader, MarkerF } from '@react-google-maps/api'
 import {
   AccordionContainer,
   AccordionRoot,
@@ -77,6 +78,11 @@ const stations: IStation[] = [
 ]
 
 export default function Home() {
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: 'AIzaSyDWPV4cI1tyKN6aznnGzzkP_6EJqNgGE6M',
+  })
+
   return (
     <>
       <Header />
@@ -197,15 +203,51 @@ export default function Home() {
               })}
             </StationFilter>
             <StationMap>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14637.396939834474!2d-46.64157255!3d-23.483927249999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1681861588012!5m2!1spt-BR!2sbr"
-                width="695"
-                height="413"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              {isLoaded ? (
+                <GoogleMap
+                  mapContainerStyle={{ width: '100%', height: '100%' }}
+                  center={{
+                    lat: -23.57415,
+                    lng: -46.62309,
+                  }}
+                  options={{
+                    streetViewControl: true, // desabilita o controle Street View
+                    scaleControl: true, // desabilita o controle de escala
+                    mapTypeControl: true, // desabilita o controle de tipo de mapa
+                    zoomControl: true, // desabilita o controle de zoom
+                    rotateControl: true, // desabilita o controle de rotação
+                    fullscreenControl: true, // desabilita o controle de tela cheia
+                  }}
+                  zoom={17}
+                >
+                  <MarkerF
+                    position={{
+                      lat: -23.563937494799113,
+                      lng: -46.652506433645,
+                    }}
+                    icon={'https://i.ibb.co/txykmBd/marker-dark.png'}
+                  />
+                  <MarkerF
+                    position={{
+                      lat: -23.573672713313073,
+                      lng: -46.62330428874597,
+                    }}
+                    icon={'https://i.ibb.co/txykmBd/marker-dark.png'}
+                  />
+
+                  <MarkerF
+                    position={{
+                      lat: -23.583085723465377,
+                      lng: -46.66917237597347,
+                    }}
+                    icon={'https://i.ibb.co/txykmBd/marker-dark.png'}
+                  />
+                </GoogleMap>
+              ) : (
+                <>
+                  <p>Carregando Mapa</p>
+                </>
+              )}
             </StationMap>
           </StationMapBox>
         </StationArea>
