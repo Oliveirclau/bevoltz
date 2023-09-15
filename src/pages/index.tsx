@@ -46,6 +46,31 @@ import {
   TextBox,
   AccordionContent,
 } from '@styles/pages/Intro/styles'
+import { IStation } from 'src/shared/types/station'
+
+const stations: IStation[] = [
+  {
+    title: 'Estação #1',
+    type: 'Universidade',
+    hour: 'Seg à Sexta 7h - 22h',
+    address: 'Av. Lins de Vasconcelos, 1222 - Aclimação, São Paulo',
+    phone: '(11) 3385-8010',
+  },
+  {
+    title: 'Estação #2',
+    type: 'Universidade',
+    hour: 'Seg à Sexta 7h - 22h',
+    address: 'Av. Paulista, 1106 - Bela Vista',
+    phone: '(11) 3385-8010',
+  },
+  {
+    title: 'Estação #3',
+    type: 'Universidade',
+    hour: 'Seg à Sexta 7h - 22h',
+    address: 'Av. Brigadeiro Luís Antônio, 4980 - Jardim Paulista',
+    phone: '(11) 99999-1577',
+  },
+]
 
 export default function Home() {
   return (
@@ -148,21 +173,24 @@ export default function Home() {
           />
 
           <StationSearch>
-            <InputSelect
-              label="Cidade:"
-              options={['São Paulo', 'Rio de janeiro', 'Minas Gerais']}
-            />
-            <InputSelect
-              label="Categoria:"
-              options={['Estacionamento', 'Farmácia', 'Shopping']}
-            />
+            <InputSelect label="Cidade:" options={['São Paulo']} />
+            <InputSelect label="Categoria:" options={['Universidade']} />
           </StationSearch>
 
           <StationMapBox>
             <StationFilter>
-              <StationCard />
-              <StationCard />
-              <StationCard />
+              {stations.map(({ address, hour, phone, title, type }, index) => {
+                return (
+                  <StationCard
+                    key={index}
+                    address={address}
+                    hour={hour}
+                    phone={phone}
+                    title={title}
+                    type={type}
+                  />
+                )
+              })}
             </StationFilter>
             <StationMap>
               <Image src={map} width={695} height={413} alt="map" />
