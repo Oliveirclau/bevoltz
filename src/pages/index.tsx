@@ -257,7 +257,7 @@ export default function Home() {
         <AppArea className="container-content">
           <AppTextBox>
             <Heading
-              content="O aplicativo beVoltz está disponivel nas principais plataformas"
+              content="Em breve, o aplicativo beVoltz estará disponível nas principais plataformas"
               color="black"
               size="xlarge"
               level={2}
@@ -303,7 +303,7 @@ export default function Home() {
                 <Accordion.Header>
                   <AccordionTrigger>
                     <Heading
-                      content="É possível carregar motos na estação?"
+                      content="Quais veículos são compatíveis com as estações de carregamento?                      "
                       color="gray_300"
                       size="medium"
                       level={1}
@@ -315,7 +315,7 @@ export default function Home() {
                 </Accordion.Header>
                 <AccordionContent>
                   <Text
-                    content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen"
+                    content="Nossas estações de carregamento são versáteis e oferecem uma ampla gama de opções de plugues para atender a praticamente todos os tipos de veículos elétricos disponíveis no mercado. Recomendamos verificar a disponibilidade dos tipos de plugues na estação de carregamento de sua escolha através do nosso aplicativo antes de se dirigir ao local."
                     color="gray_100"
                     size="xsmall"
                     mobileSize="xxsmall"
@@ -328,7 +328,7 @@ export default function Home() {
                 <Accordion.Header>
                   <AccordionTrigger>
                     <Heading
-                      content="É possível carregar motos na estação?"
+                      content="Como funciona o sistema de reservas?"
                       color="gray_300"
                       size="medium"
                       level={1}
@@ -340,7 +340,7 @@ export default function Home() {
                 </Accordion.Header>
                 <AccordionContent>
                   <Text
-                    content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen"
+                    content="Você pode agendar um horário para carregar seu veículo diretamente pelo nosso aplicativo móvel. A duração mínima da reserva é de 2 horas, e oferecemos um período de tolerância de 15 minutos para sua chegada. Isso proporciona flexibilidade caso você enfrente pequenos atrasos.                    "
                     color="gray_100"
                     size="xsmall"
                     mobileSize="xxsmall"
@@ -353,7 +353,7 @@ export default function Home() {
                 <Accordion.Header>
                   <AccordionTrigger>
                     <Heading
-                      content="É possível carregar motos na estação?"
+                      content="É possível ter minha própria estação de carregamento beVotlz?"
                       color="gray_300"
                       size="medium"
                       level={1}
@@ -365,7 +365,7 @@ export default function Home() {
                 </Accordion.Header>
                 <AccordionContent>
                   <Text
-                    content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen"
+                    content="Sim, com certeza! Oferecemos uma variedade de planos de instalação de estações de carregamento, tanto para estabelecimentos comerciais quanto para residências. Para obter uma consulta personalizada e mais informações, por favor, envie um e-mail para contato@bevoltz.com. Um de nossos consultores especializados entrará em contato com você para discutir as melhores opções para atender às suas necessidades.                    "
                     color="gray_100"
                     size="xsmall"
                     mobileSize="xxsmall"
